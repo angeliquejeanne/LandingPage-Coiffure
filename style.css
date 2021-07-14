@@ -1,0 +1,126 @@
+:root {
+    --text-color: #111;
+    --bg-color: rgba(255, 192, 203, 0.945);
+  }
+  
+  body {
+    font-family: termina, sans-serif;
+    background: var(--bg-color);
+    transition: 0.3s ease-out;
+    overflow-x: hidden;
+    max-width: 100%;
+    width: 100%;
+    overscroll-behavior: none;
+  }
+  .one {   
+    background-image: url('https://cdn.pixabay.com/photo/2016/06/11/12/13/pink-hair-1450045_960_720.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  section:not(#sectionPin) {
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 2rem;
+    padding: 50px 10vw;
+    margin: auto;
+    place-items: center;
+  }
+  
+  img {
+    height: 80vh;
+    width: auto;
+    object-fit: cover;
+  }
+  
+  h1 {
+    font-size: 5rem;
+    line-height: 1;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    position: absolute;
+    top: 10vw;
+    left: 10vw;
+    z-index: 4;
+    overflow-wrap: break-word;
+    hyphens: auto;
+  }
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 16vw;
+    }
+  }
+  h1 span {
+    display: block;
+  }
+  
+  h2 {
+    font-size: 2rem;
+    max-width: 400px;
+    color: pink;
+  }
+  
+  .credit {
+    font-family: Termina, sans-serif;
+  }
+  .credit a {
+    color: var(--text-color);
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  #sectionPin {
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    left: 0;
+    background: var(--text-color);
+    color: var(--bg-color);
+  }
+  
+  .pin-wrap {
+    height: 100vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 50px 10vw;
+  }
+  .pin-wrap > * {
+    min-width: 60vw;
+    padding: 0 5vw;
+  }
+  
+  p {
+    position: absolute;
+    bottom: 10vw;
+    right: 10vw;
+    width: 200px;
+    line-height: 2;
+    font-weight: bold;
+    background-color: #fff3;
+    border-radius: 5px;
+  }
+  .third {
+      background: #000;
+      
+  }
+  .third a {
+    color: pink;
+}
+@media screen and (max-width: 960px) {
+    .third img {
+        width: 80%;
+        justify-content: center;
+        grid-template-columns: none;
+        display: flex;
+        margin: 0px auto;
+    }
+    .third h2 {
+        font-size: 1.5rem;
+    }
+}
